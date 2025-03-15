@@ -1,136 +1,77 @@
 import {
-  AppBar,
   Box,
   Button,
-  Card,
   Container,
-  Paper,
   Typography,
   Stack,
   Chip,
   CssBaseline,
   Divider,
-  SvgIcon,
   Link,
 } from "@mui/material";
-import { useState } from "react";
-import { makeStyles, ThemeProvider } from "@mui/material/styles";
-import { theme } from "./theme.js";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-const skills = [
-  "React",
-  "Javascript",
-  "Python",
-  "MySQL",
-  "MongoDB",
-  "Express.js",
-];
+import StyledCard from "./components/StyledCard.jsx";
+import Me from "./Me.jsx";
+import Skills from "./Skills.jsx";
+import About from "./About.jsx";
+import Projects from "./Projects.jsx";
+import Education from "./Education.jsx";
 
 function App() {
-  const styles = {
-    big: {
-      fontSize: "1.5rem",
-      fontWeight: "bold",
-    },
-  };
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container>
-        <Box display="flex" gap="2rem" marginTop="2rem" flexWrap={"wrap"}>
-          <Stack flex={1} spacing={2}>
-            <Paper sx={{ padding: 2 }}>
+
+    const theme = createTheme({
+                colorSchemes:{
+                    dark: {
+                        palette:{
+                            primary: {
+                                main: "#ffffff",
+                            },
+                            secondary: {
+                                main: "#4caf50",
+                            },
+                        }
+                    },
+
+                    light: {
+                        palette:{
+                            primary: {
+                                main: "#000000",
+                            },
+                            secondary: {
+                                main: "#4caf50",
+                            },
+                        }
+                    }
+                },
+            })
+
+    return (
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
               <Container>
-                <Stack spacing={2}>
-                  <Stack>
-                    <Typography sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>
-                      Justin Ho
-                    </Typography>
-                    <Typography>Fullstack Developer</Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: { xs: "column", sm: "column", md: "row" },
+                    gap: 3,
+                    marginTop: { xs: "2rem", sm: "2rem", md: "4rem" },
+                  }}
+                  flexWrap={"wrap"}
+                >
+                  <Stack flex="1" spacing={3} minWidth={"300px"}>
+                    <Me/>
+                    <Skills/>
                   </Stack>
-                  <Button
-                    variant="contained"
-                    component={Link}
-                    href="mailto:justinho016@gmail.com"
-                  >
-                    Contact me
-                  </Button>
-                  <Divider />
-                  <Stack spacing={2}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                      }}
-                    >
-                      <GitHubIcon fontSize="small"></GitHubIcon>
-                      <Link
-                        href="https://www.github.com/Toash"
-                        underline="none"
-                        sx={{
-                          color: theme.palette.text.secondary,
-                          "&:hover": {
-                            color: theme.palette.primary.main,
-                          },
-                        }}
-                      >
-                        /Toash
-                      </Link>
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                      }}
-                    >
-                      <LinkedInIcon fontSize="small"></LinkedInIcon>
-                      <Link
-                        href="https://www.linkedin.com/in/justin-ho-3494b1259/"
-                        underline="none"
-                        sx={{
-                          color: theme.palette.text.secondary,
-                          "&:hover": {
-                            color: theme.palette.primary.main,
-                          },
-                        }}
-                      >
-                        /justin-ho-3494b1259
-                      </Link>
-                    </Box>
+                  <Stack flex="2" spacing={3}>
+                    <About/>
+                      <Projects/>
+                      <Education/>
                   </Stack>
-                </Stack>
+                </Box>
               </Container>
-            </Paper>
-            <Paper sx={{ padding: 2 }}>
-              <Container>
-                <Stack spacing={2}>
-                  <Typography sx={{ ...styles.big }}>Skills</Typography>
-                  <Box display="flex" gap="0.5rem" flexWrap="wrap">
-                    {skills.map((skill) => (
-                      <Chip label={skill} variant="filled" size="small" />
-                    ))}
-                  </Box>
-                </Stack>
-              </Container>
-            </Paper>
-          </Stack>
-          <Stack flex={2} spacing={2}>
-            <Paper sx={{ padding: 2 }}>
-              <Container>
-                <Typography sx={{ ...styles.big }}>About Me</Typography>
-                <Typography>
-                  I am a software engineer with a passion for building web
-                  applications.
-                </Typography>
-              </Container>
-            </Paper>
-          </Stack>
-        </Box>
-      </Container>
-    </ThemeProvider>
+            </ThemeProvider>
   );
 }
 
