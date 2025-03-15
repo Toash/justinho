@@ -16,19 +16,23 @@ const Me = () => {
 
         <StyledCard>
             <Stack spacing={2}>
-                <Stack direction={"row"} justifyContent={"space-between"}>
+                <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"}>
                     <Stack>
-                       <HeaderTypography>
+                       <Typography fontSize={"2rem"} fontWeight={"bold"} component={"h1"}>
                             Justin Ho
-                       </HeaderTypography>
+                       </Typography>
                         <Typography fontWeight={"bold"}>Fullstack Developer</Typography>
                     </Stack>
                     <IconButton onClick={() => {
-                        console.log(mode)
                          setMode(mode==="light"?"dark":"light")
-                    }}>
+                    }}
+                    >
 
-                        <DarkModeIcon/>
+                        {mode === "light"?
+                            <LightModeIcon/>
+                       : <DarkModeIcon/>
+                        }
+
                     </IconButton>
                 </Stack>
                 <Button

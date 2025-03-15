@@ -18,6 +18,7 @@ import Skills from "./Skills.jsx";
 import About from "./About.jsx";
 import Projects from "./Projects.jsx";
 import Education from "./Education.jsx";
+import Experience from "./Experience.jsx";
 
 function App() {
 
@@ -33,7 +34,6 @@ function App() {
                             },
                         }
                     },
-
                     light: {
                         palette:{
                             primary: {
@@ -43,11 +43,12 @@ function App() {
                                 main: "#4caf50",
                             },
                         }
-                    }
+                    },
                 },
             })
 
     return (
+            // uses system color scheme by default
             <ThemeProvider theme={theme}>
               <CssBaseline />
               <Container>
@@ -65,9 +66,10 @@ function App() {
                     <Skills/>
                   </Stack>
                   <Stack flex="2" spacing={3}>
-                    <About/>
-                      <Projects/>
+                      <About/>
                       <Education/>
+                      <Projects/>
+                      <Experience/>
                   </Stack>
                 </Box>
               </Container>

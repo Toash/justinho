@@ -8,9 +8,10 @@ const Projects = () => {
         {
            title: "Current Project - Health Clinic",
             descriptions:["Fullstack app for patient doctor management, health tracking, and prescription handling ",
-                "- Learning Spring Boot JPA by creating endpoints and connecting to the frontend.",],
+                "- Learning Spring Boot JPA by creating endpoints and connecting to the frontend."],
             skills: [
                 "React",
+                "Spring Boot"
             ],
             link: "https://github.com/Toash/Clinic"
         },
@@ -36,15 +37,15 @@ const Projects = () => {
             </HeaderTypography>
                 <StyledCard>
                     <Stack divider={<Divider/>} spacing={2}>
-                {projects.map((project) => (
-                    <>
+                {projects.map((project,i) => (
+                    <Box key={i}>
                         <Stack spacing={2}>
                             <Box>
                             <Typography sx={{fontSize: "1.1rem", fontWeight:"bold"}}>
                                 {project.title}
                             </Typography>
-                                { project.descriptions.map((description) => (
-                                    <Typography color={theme.palette.text.secondary}>
+                                { project.descriptions.map((description,i) => (
+                                    <Typography key={i} color={theme.palette.text.secondary}>
                                     {description}
                                     </Typography>
                                 ))}
@@ -52,8 +53,8 @@ const Projects = () => {
                             </Box>
                             <Stack direction={"row"} justifyContent={"space-between"}>
                                 <Stack direction={"row"} spacing={1}>
-                                    {project.skills.map((skill) => (
-                                        <Chip label={skill} size={"small"}/>
+                                    {project.skills.map((skill,i) => (
+                                        <Chip key={i} label={skill} size={"small"}/>
                                     ))}
                                 </Stack>
                                     <Link display="flex" alignItems={"center"} gap={".25rem"} target={"_blank"} href={project.link}>
@@ -63,12 +64,10 @@ const Projects = () => {
 
                             </Stack>
                         </Stack>
-                    </>
+                    </Box>
                 ))}
                     </Stack>
                 </StyledCard>
-
-
             </Stack>
         </Box>
     )
