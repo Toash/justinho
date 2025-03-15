@@ -5,10 +5,11 @@ import HeaderTypography from "./components/HeaderTypography.jsx";
 const skills = [
     "React",
     "Javascript",
-    "Python",
+    "Java",
     "MySQL",
     "MongoDB",
     "Express.js",
+    "Python",
 ];
 const Skills = () => {
     return (
