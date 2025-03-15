@@ -51,7 +51,12 @@ const Projects = () => {
                                 ))}
 
                             </Box>
-                            <Stack direction={"row"} justifyContent={"space-between"}>
+                            <Stack sx={(theme)=>({
+                                flexDirection: "column",
+                                [theme.breakpoints.up("md")]: {
+                                    flexDirection:"row"
+                                }
+                            })} justifyContent={"space-between"} flexWrap={"wrap"} gap={2}>
                                 <Stack direction={"row"} spacing={1}>
                                     {project.skills.map((skill,i) => (
                                         <Chip key={i} label={skill} size={"small"}/>

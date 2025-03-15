@@ -53,19 +53,19 @@ function App() {
               <CssBaseline />
               <Container>
                 <Box
-                  sx={{
+                  sx={(theme) => ({
                     display: "flex",
-                    flexDirection: { xs: "column", sm: "column", md: "row" },
+                    flexDirection: "row", [theme.breakpoints.down("md")]: {flexDirection:"column" },
                     gap: 3,
-                    marginTop: { xs: "2rem", sm: "2rem", md: "4rem" },
-                  }}
+                      marginTop: "3rem", [theme.breakpoints.down("md")]:{marginTop:"2rem"}
+                  })}
                   flexWrap={"wrap"}
                 >
-                  <Stack flex="1" spacing={3} minWidth={"300px"}>
+                  <Stack flex="1" spacing={3} minWidth={"250px"}>
                     <Me/>
                     <Skills/>
                   </Stack>
-                  <Stack flex="2" spacing={3}>
+                  <Stack flex="2" spacing={3} minWidth={"250px"} >
                       <About/>
                       <Education/>
                       <Projects/>
