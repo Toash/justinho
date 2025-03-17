@@ -9,7 +9,7 @@ const FadeInComponent = ({children}) => {
   }, []);
 
   return (
-    <Fade in={visible} timeout={1500}  >
+    <Fade in={visible} timeout={2500}  >
         {children}
     </Fade>
   );
