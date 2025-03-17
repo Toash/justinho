@@ -19,6 +19,7 @@ import About from "./About.jsx";
 import Projects from "./Projects.jsx";
 import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
+import CustomFade from "./components/CustomFade.jsx";
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
             // uses system color scheme by default
             <ThemeProvider theme={theme}>
               <CssBaseline />
+                <CustomFade key="step0">
               <Container>
                 <Box
                   sx={(theme) => ({
@@ -73,6 +75,7 @@ function App() {
                   </Stack>
                 </Box>
               </Container>
+                </CustomFade>
             </ThemeProvider>
   );
 }
