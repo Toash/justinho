@@ -52,7 +52,6 @@ function App() {
             // uses system color scheme by default
             <ThemeProvider theme={theme}>
               <CssBaseline />
-                <CustomFade>
               <Container>
                 <Box
                   sx={(theme) => ({
@@ -75,7 +74,6 @@ function App() {
                   </Stack>
                 </Box>
               </Container>
-                </CustomFade>
             </ThemeProvider>
   );
 }

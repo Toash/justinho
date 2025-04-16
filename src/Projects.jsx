@@ -6,14 +6,13 @@ const Projects = () => {
 
     const projects= [
         {
-           title: "Current Project - Health Clinic",
-            descriptions:["Fullstack app for patient doctor management, health tracking, and prescription handling ",
-                "- Learning Spring Boot JPA by creating endpoints and connecting to the frontend."],
+           title: "X86 Code Generator",
+            descriptions:["Generating x86 for cool programs",
+                ],
             skills: [
-                "React",
-                "Spring Boot"
+                "Python",
             ],
-            link: "https://github.com/Toash/Clinic"
+            link: "https://github.com/Toash/cool-code-generator"
         },
         {
             title: "Boulderstat",

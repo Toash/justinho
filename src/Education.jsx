@@ -12,6 +12,7 @@ const Education = () => {
             timeline:"Aug 22' - May 26'",
             gpa:"3.8",
             courses: [
+                "CS485: Special Topics: Compilers",
                 "CS490: Guided Design in Software Engineering",
                 "IT302: Advanced Internet Applications",
                 "CS331: Database System Design and Management",
