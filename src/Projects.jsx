@@ -14,9 +14,10 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 const Projects = () => {
   const projects = [
     {
-      title: "x86 Code Generator",
+      title: "x86 Compiler",
       descriptions: [
-        "Generating x86 for cool programs",
+        "- Built a code generator that translates Classroom Object-Oriented Language programs to x86 assembly.",
+        "- Implemented lexing, parsing and semantic analysis.",
         "- Created and maintained a testing suite to test the compiler throughout development.",
       ],
       skills: ["Python"],
