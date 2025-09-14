@@ -15,17 +15,23 @@ const Projects = () => {
   const projects = [
     {
       title: "x86 Compiler",
-      descriptions: [
-        "- Built a code generator that translates Classroom Object-Oriented Language programs to x86 assembly.",
-        "- Implemented lexing, parsing and semantic analysis.",
-        "- Created and maintained a testing suite to test the compiler throughout development.",
-      ],
+      descriptions: ["Compiles a Java-like language into x86 assembly."],
       skills: ["Python"],
       link: "https://github.com/Toash/cool-code-generator",
     },
     {
+      title: "Health Clinic App",
+      descriptions: [
+        "Patients can describe and track symptoms and doctors can prescribe medication.",
+      ],
+      skills: ["React", "Spring Boot"],
+      link: "https://github.com/Toash/ClimbingApp",
+    },
+    {
       title: "Boulderstat",
-      descriptions: ["Store videos of climbs and chart progress over time."],
+      descriptions: [
+        "Serverless application that provides analytics for climbs and uses S3 for media uploads, and Lambda + API Gateway for backend processing.",
+      ],
       skills: ["React", "Express", "MongoDB", "AWS"],
       link: "https://github.com/Toash/ClimbingApp",
     },
