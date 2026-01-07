@@ -13,6 +13,7 @@ import {
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import HeaderTypography from "./components/HeaderTypography.jsx";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -77,7 +78,7 @@ const Me = () => {
             target={"_blank"}
           >
             <GitHubIcon fontSize="inherit"></GitHubIcon>
-            /Toash
+            GitHub
           </Link>
           <Box>
             <Link
@@ -95,7 +96,7 @@ const Me = () => {
               target={"_blank"}
             >
               <LinkedInIcon fontSize="inherit"></LinkedInIcon>
-              /justin-ho-3494b1259
+              LinkedIn
             </Link>
           </Box>
           <Box>
@@ -114,7 +115,26 @@ const Me = () => {
               target={"_blank"}
             >
               <SportsEsportsIcon fontSize="inherit"></SportsEsportsIcon>
-              /Video Games! (itch.io)
+              itch
+            </Link>
+          </Box>
+          <Box>
+            <Link
+              display="flex"
+              alignItems="center"
+              gap={".25rem"}
+              href="https://www.youtube.com/@Toashh"
+              underline="none"
+              sx={{
+                color: theme.palette.text.secondary,
+                "&:hover": {
+                  color: theme.palette.primary.main,
+                },
+              }}
+              target={"_blank"}
+            >
+              <YouTubeIcon fontSize="inherit"></YouTubeIcon>
+              YouTube
             </Link>
           </Box>
         </Stack>

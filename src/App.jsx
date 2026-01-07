@@ -68,10 +68,10 @@ function App() {
             <Skills />
           </Stack>
           <Stack flex="2" spacing={3} minWidth={"250px"}>
-            <About />
+            {/* <About /> */}
+            <Experience />
             <Education />
             <Projects />
-            <Experience />
           </Stack>
         </Box>
       </Container>
