@@ -8,7 +8,7 @@ const About = () => {
       <HeaderTypography>About Me</HeaderTypography>
       <Typography>
         I do software development. Spanning web applications, game development,
-        and systems engineering.
+        and systems programming.
       </Typography>
     </StyledCard>
   );
