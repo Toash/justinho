@@ -3,15 +3,18 @@ import { Box, Chip, Divider, Stack, Typography } from "@mui/material";
 import HeaderTypography from "./components/HeaderTypography.jsx";
 
 const skills = [
-  "React",
-  "Javascript",
-  "Java",
-  "Spring Boot",
-  "MySQL",
-  "AWS",
-  "MongoDB",
-  "Express.js",
+  "C#",
   "Python",
+  "Java",
+  "Javascript",
+
+  "React",
+  "Vue",
+  "Express.js",
+  "AWS",
+  "SQL",
+
+  "Unity",
 ];
 const Skills = () => {
   return (

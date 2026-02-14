@@ -19,14 +19,14 @@ const Projects = () => {
       skills: ["Python"],
       link: "https://github.com/Toash/cool-code-generator",
     },
-    {
-      title: "Health Clinic App",
-      descriptions: [
-        "Patients can describe and track symptoms and doctors can prescribe medication.",
-      ],
-      skills: ["React", "Spring Boot"],
-      link: "https://github.com/Toash/ClimbingApp",
-    },
+    // {
+    //   title: "Health Clinic App",
+    //   descriptions: [
+    //     "Patients can describe and track symptoms and doctors can prescribe medication.",
+    //   ],
+    //   skills: ["React", "Spring Boot"],
+    //   link: "https://github.com/Toash/ClimbingApp",
+    // },
     {
       title: "Boulderstat",
       descriptions: [
